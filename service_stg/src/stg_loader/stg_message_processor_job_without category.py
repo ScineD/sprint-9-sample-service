@@ -72,21 +72,13 @@ class StgMessageProcessor:
 
                 # Формируем список продуктов
                 products = []
-                menu = restaurant_info.get('menu', []) if restaurant_info else []
                 for item in payload.get('order_items', []):
-                    category = item.get('category') if 'category' in item and item.get('category') is not None else None
-                    if category is None and menu:
-                        # ищем продукт по id в меню ресторана
-                        for menu_item in menu:
-                            if menu_item.get('_id') == item.get('id'):
-                                category = menu_item.get('category')
-                                break
                     product = {
                         'id': item.get('id'),
                         'price': item.get('price'),
                         'quantity': item.get('quantity'),
                         'name': item.get('name'),
-                        'category': category
+                        'category': item.get('category') if 'category' in item else None
                     }
                     products.append(product)
 
