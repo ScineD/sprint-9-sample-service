@@ -14,23 +14,6 @@ image:
 containerPort: 5000
 
 config:
-  KAFKA_HOST: rc1a-50j6sguhv9j6pr2i.mdb.yandexcloud.net
-  KAFKA_PORT: "9091"
-  KAFKA_CONSUMER_USERNAME: producer_consumer
-  KAFKA_CONSUMER_PASSWORD: nGCm402r4Y
-  KAFKA_CONSUMER_GROUP: main-consumer-group
-  KAFKA_SOURCE_TOPIC: order-service_orders
-  KAFKA_STG_SERVICE_ORDERS_TOPIC: stg-service-orders
-
-  REDIS_HOST: c-c9qsi1ge5o80ukgqb48s.rw.mdb.yandexcloud.net
-  REDIS_PORT: "6380"
-  REDIS_PASSWORD: 9Hp9yEO4Dg
-
-  PG_WAREHOUSE_HOST: rc1a-lupff4l5eg8qkhf8.mdb.yandexcloud.net
-  PG_WAREHOUSE_PORT: "6432"
-  PG_WAREHOUSE_DBNAME: sprint9dwh
-  PG_WAREHOUSE_USER: db_user
-  PG_WAREHOUSE_PASSWORD: 48bVVhyw07Qb
 
 imagePullSecrets: []
 nameOverride: ""
